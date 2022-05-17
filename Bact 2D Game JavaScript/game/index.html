@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Exterminate</title>
+        <style>
+          #grad{
+            height: 1000px
+            background: rgb(15,32,39);
+            background: linear-gradient(231deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 35%, rgba(44,83,100,1) 100%);
+          }
+          .container {
+            position: relative;
+          }
+          #text {
+            position: absolute;
+            pointer-events: none;
+            left: 650px;
+            top: 100px;
+            z-index: 10;
+          }
+          #dots {
+            position: absolute;
+            pointer-events: none;
+            left: 650px;
+            top: 100px
+            z-index: 2;
+          }
+          p {
+            color:blue;
+          }
+        </style>
+
+        <script src="app.js"> </script>
+    </head>
+    <center>
+    <body onload="main()" id="grad">
+        <div class="container">
+          <canvas id="area" width="800" height="800">
+            use browser that supports canvas
+          </canvas>
+          <canvas id="dots" width="800" height="800"></canvas>
+          <canvas id="text" width="800" height="800"></canvas>      
+        </div>
+
+
+        <h1 style="color: white"> Result: <span id="display_score"></span></h1>
+        <h3 style="color: white"> Left: <span id="remaining_bact"></span></h3>
+        <h3 style="color: white"> Health: <span id="lives"></span></h3> 
+    </body>
+    </center>
+</html>

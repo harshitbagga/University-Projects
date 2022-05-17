@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        android:clickable="true"
+        android:onClick="GoToAddCardActivity"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_circle_outline_black_24dp" />
+
+    <ImageView
+        android:id="@+id/profile_button"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:onClick="OpenProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_placeholder" />
+
+    <SearchView
+        android:id="@+id/searchView3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/settings_popup_menu"
+        app:layout_constraintStart_toEndOf="@+id/profile_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/settings_popup_menu"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:onClick="PopUpSettingsMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView3"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/categories_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/allcards_category_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_border_light"
+                android:minWidth="38dip"
+                android:minHeight="38dip"
+                android:onClick="ClearDb"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="All Cards"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        tools:layout_editor_absoluteX="-51dp">
+
+        <LinearLayout
+            android:id="@+id/card_library_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

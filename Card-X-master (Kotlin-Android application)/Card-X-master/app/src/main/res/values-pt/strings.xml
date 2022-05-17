@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Card X</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="sign_up">Inscrever-se</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="wong_email_or_password">Email ou senha incorreto(s)</string>
+    <string name="please_type_your_email">Digite seu email</string>
+    <string name="please_type_your_password">Por favor digite sua senha</string>
+    <string name="error_getting_data_from_database">Erro ao obter dados do banco de dados</string>
+    <string name="dark_theme">TEMA ESCURO</string>
+    <string name="light_theme">TEMA CLARO</string>
+    <string name="sucess_reset_password_message">Você deve receber um e-mail em breve com instruções</string>
+    <string name="failure_reset_password_message">Erro, não há uma conta desse email</string>
+    <string name="forgotpassword_activity_title">Esqueceu a senha</string>
+    <string name="reset_password">Redefinir senha</string>
+    <string name="short_password_error">A senha deve ter pelo menos 6 caracteres</string>
+    <string name="password_dont_match_error">As senhas não correspondem</string>
+    <string name="email_already_used_error">Já existe um usuário com este email</string>
+    <string name="first_name">Primeiro nome</string>
+    <string name="last_name">Sobrenome</string>
+    <string name="confirm_password">Confirme a Senha</string>
+    <string name="create_account">Criar Conta em portugues-Brasil</string>
+    <string name="all_cards">Todos os Cartões</string>
+    <string name="theme_selection">Seleção de Tema</string>
+    <string name="settings">Configurações</string>
+    <string name="name">Nome</string>
+    <string name="business_name">Nome da empresa</string>
+    <string name="sepeciality">Especialidade</string>
+    <string name="telephone_1">Telefone 1</string>
+    <string name="telephone_2">Telefone 2</string>
+    <string name="telephone_3">Telefone 3</string>
+    <string name="mail_address">Endereço de correio</string>
+    <string name="address">Endereço</string>
+    <string name="category">Categoria</string>
+    <string name="create_card">CRIAR CARTÃO</string>
+    <string name="no_permission_error">O aplicativo não possui permissões para fazer isso.</string>
+    <string name="name_business_inputs_not_filled_error">Preencha o nome ou o campo de nome comercial</string>
+    <string name="permission_denied">Permissao não garantida</string>
+    <string name="no_internet_error">Não há conexão com a Internet disponível, não é possível criar uma nova conta</string>
+</resources>

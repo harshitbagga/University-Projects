@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>Bacto</title>
+
+    <style>
+      .display-points {
+        position: absolute;
+        left: 1210px;
+        top: 250px;
+      }
+      p{
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFFF
+      }
+      .container {
+        position: relative;
+      }
+      #text {
+        position: absolute;
+        pointer-events: none;
+        left: 0px;
+        top: 0px;
+        z-index: 2;
+      }
+      #brightness {
+        display: inline-block;
+        border: none;
+        color: white
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        border-radius: 12px;
+      }
+      #brightness span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      #brightness span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      #brightness:hover{
+          background-color: #4CAF50;
+          color: white;
+          box-shadow: 0 16px 20px 0 rgba(0,0,0,0.24),0 20px 50px 0 rgba(0,0,0,0.19)
+      }
+      #brightness:hover span {
+        padding-right: 25px;
+      }
+
+      #brightness:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+      #grad{
+         height: 1000px
+         background: rgb(15,32,39);
+         background: linear-gradient(231deg, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 35%, rgba(44,83,100,1) 100%);
+      }
+    </style>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="sphere.js"></script>
+    <script type="text/javascript" src="shaders.js"></script>
+    <script type="text/javascript" src="utils/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="utils/gl_tools.js"></script>
+    <script type="text/javascript" src="utils/geometry_tools.js"></script>
+  </head>
+  <body onload="main();" id="grad">
+
+    <canvas id="game-area" height="800" width="800">
+      Your browser does not appear to support canvas.
+    </canvas>
+    <canvas id="text" height="800" width="800"></canvas>
+    <div class="display-points">
+      <p> Result: <span id="points-display"></span></p>
+      <p> Left: <span id="remainingbacteria"></span></p>
+      <p> Health: <span id="life"></span></p>
+      <p>Lighting: <button id="brightness" style="vertical-align:middle"><span>On </span></button></p>
+    </div>
+  </body>
+</html>

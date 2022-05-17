@@ -1,0 +1,19 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.20-M2'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    compile'no.tornado:tornadofx:1.7.14'
+    compile group: 'com.jfoenix', name: 'jfoenix', version: '8.0.5'
+
+
+}
